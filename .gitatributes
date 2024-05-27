@@ -1,0 +1,21 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Declare files that will always have CRLF line endings on checkout.
+*.bat text eol=crlf
+
+# Declare files that will always have LF line endings on checkout.
+*.sh text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+
+# Binary files
+*.jpg binary
+*.png binary
+*.gif binary
+
+git add .gitatributes
+git commit -m "Add .gitattributes file to normalize line endings"
+
+git rm --cached -r .
+git reset --hard
